@@ -64,7 +64,12 @@ Most of time, we just want the actual response data, so let's change our code sl
 		$scope.zenData = data.data;
 	});
 ```
-**EXERCISE: Use `$http.get()` to make a request to `reddit.com/.json` and display the title of every post on your template.**
+**EXERCISE: Read about [the same origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) ([wikipedia has some good info too](https://en.wikipedia.org/wiki/Same-origin_policy)) and [Cross-Origin Resource Sharing or CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS).  Describe what both the same origin policy and CORS are.**
+
+**EXERCISE: Try using `$http.get()` to make a request to `reddit.com/.json` and display the title of every post on your template. You should get an error. What was the error?  Why did the api.github.com domain work and not the reddit.com domain?**
+
+
+**EXERCISE: Since making a request to `reddit.com/.json` didn't work, go to the url in your browser and copy all the json that gets returned.  Save the json data into a file in your app called `reddit.json`.  Use the `$http.get()` service to make a request to get the `reddit.json` file.  Display the title of every post on your template.  Why does this method for getting the json data work?**
 
 
 **EXERCISE: Try making a request to an invalid URL.  Write code to properly handle a request that fails.  Does Angular have any built-in functionality that could help you?**
