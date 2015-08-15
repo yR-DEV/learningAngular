@@ -1,11 +1,11 @@
-#Angular Reddit Clone
+# Angular Reddit Clone
 
 It's time to put everything you've learned so far about Angular to use.  You're going to make a reddit clone with posts, comments, searching, sorting, animations, and more! Watch the following video for an in-depth walk-through of the features.
 
 
 [![](https://i.gyazo.com/f9d435b4e198cf5ea3c29607d40a8958.png)](https://vimeo.com/135778837)
 
- 
+
 Requirements:
 
 * Each post has a title, author, image, and description.
@@ -27,5 +27,4 @@ Bonus Features
 
 * A user can choose to sort ascending or descending
 * A user can favorite posts and view all favorites in a separate tab
-* A user can upload an image(no backend involved)
-
+* A user can upload an image (no backend involved)
