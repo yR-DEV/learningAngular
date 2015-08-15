@@ -52,16 +52,16 @@ For a complete list see https://docs.angularjs.org/api/ng/directive
 Let's start by defining a collection. In a controller, add the following:
 
 ```js
-	$scope.names = ["Harry", "Ron", "Hermione", "Sirius", "Hedwig", "Tonks"];
+  $scope.names = ["Harry", "Ron", "Hermione", "Sirius", "Hedwig", "Tonks"];
 ```
 
 Now let's iterate through the `names` array in the template.  In `index.html`(make sure you have declared `ng-controller` correctly) add the following:
 
 ```html
 <ul>
-	<li ng-repeat="name in names">
-		{{name}}
-	 </li>
+  <li ng-repeat="name in names">
+    {{name}}
+   </li>
 </ul>
 ```
 
@@ -89,96 +89,101 @@ Try using `ng-repeat` to iterate through an array with some duplicates, like `[1
 
 Use `ng-repeat` to iterate through the attributes (keys) of an object and list them on in the template
 
-###ng-show/hide
+### ng-show/hide
 
 `ng-show` and `ng-hide` will show or hide a specific HTML element based off of a provided expression.  Let's take a look at some examples.
 
-```
-	<div ng-show="3 + 4 == 5">
-		3 + 4 isn't 5, don't show
-	</div>
+```html
+<div ng-show="3 + 4 == 5">
+  3 + 4 isn't 5, don't show
+</div>
 
-	<div ng-show="3 + 4 == 7">
-		3 + 4 is 7, do show
-	</div>
+<div ng-show="3 + 4 == 7">
+  3 + 4 is 7, do show
+</div>
 
-	<div ng-hide="3 + 4 == 5">
- 		3 + 4 isn't 5, don't hide
-	</div>
+<div ng-hide="3 + 4 == 5">
+    3 + 4 isn't 5, don't hide
+</div>
 
-	<div ng-hide="3 + 4 == 7">
-		3 + 4 is 7, do hide
-	</div>
-
+<div ng-hide="3 + 4 == 7">
+  3 + 4 is 7, do hide
+</div>
 ```
 
 The element is hidden when the expression provided to `ng-show` attribute is false. `ng-hide` will hide an element when the expression given to ng-hide is true.
 
-**EXERCISE: Inspect an element that is hidden by ng-show/hide in the browser.  What does Angular do to hide an element?**
+**EXERCISE**
 
-**EXERCISE: Create a simple password validator like the one shown below.  If the password is less than 6 characters, hide the submit button and show the error message.  Otherwise, show the button and hide the error**
+Inspect an element that is hidden by ng-show/hide in the browser.  What does Angular do to hide an element?
+
+**EXERCISE**
+
+Create a simple password validator like the one shown below.  If the password is less than 6 characters, hide the submit button and show the error message.  Otherwise, show the button and hide the error
 
 ![](http://zippy.gfycat.com/FelineEqualElectriceel.gif)
 
-###ng-class
+### ng-class
 
 `ng-class` will dynamically set an element's class depending on a provided expression.
 
 Define the following CSS class:
 
-```
-	.highlight {
-		background-color: yellow;
-	}
+```css
+.highlight {
+  background-color: yellow;
+}
 ```
 
 We can use `ng-class` to selectively apply our "highlight" class to elements.
 
-```
-	<div ng-class="{highlight: 4 + 4 == 8}"> 4 + 4 = 8</div>
-	<div ng-class="{highlight: 4 + 4 == 10}">4 + 4 = 10</div>
+```js
+<div ng-class="{highlight: 4 + 4 == 8}"> 4 + 4 = 8</div>
+<div ng-class="{highlight: 4 + 4 == 10}">4 + 4 = 10</div>
 ```
 
+**EXERCISE**
 
-**EXERCISE: Build on top of the previous password validator exercise.  Use `ng-class` to make the form and character count green when valid and red when invalid.  Take a look at the following gif:**
+Build on top of the previous password validator exercise.  Use `ng-class` to make the form and character count green when valid and red when invalid.  Take a look at the following gif:
 
 ![](http://zippy.gfycat.com/ActualBeautifulIzuthrush.gif)
 
 
-**FINAL EXERCISE: Build a simple camera shop interface using the data provided below.  Display each camera's title, image(look into `ng-src`), price, and rating.  If an item's "onSale" property is true, display the words "ON SALE!!" and give the price a yellow color.  A user should be able to sort by price or rating.  You'll need to research how to accomplish this."**
+**FINAL EXERCISE**
+
+Build a simple camera shop interface using the data provided below.  Display each camera's title, image (look into `ng-src`), price, and rating.  If an item's `onSale` property is true, display the words "ON SALE!!" and give the price a yellow color.  A user should be able to sort by price or rating.  You'll need to research how to accomplish this.
 
 ![](http://zippy.gfycat.com/UnsteadyDampCanine.gif)
 
 Use the following data:
 
-```
-	[
-		{
-			title: "Nikon D3100 DSLR",
-			image: "http://ecx.images-amazon.com/images/I/713u2gDQqML._SX522_.jpg",
-			rating: 3.4,
-			price: 369.99,
-			onSale: true
-		},
-		{
-			title: "Canon EOS 70D",
-			image: "http://ecx.images-amazon.com/images/I/81U00AkAUWL._SX522_.jpg",
-			rating: 2.0,
-			price: 1099.0,
-			onSale: false
-		},
-		{
-			title: "Nikon D810A",
-			image:"http://ecx.images-amazon.com/images/I/91wtXIfLl2L._SX522_.jpg",
-			rating: 4.2,
-			price: 3796.95,
-			onSale: true
-		}
-	]
+```js
+[
+  {
+    title: "Nikon D3100 DSLR",
+    image: "http://ecx.images-amazon.com/images/I/713u2gDQqML._SX522_.jpg",
+    rating: 3.4,
+    price: 369.99,
+    onSale: true
+  },
+  {
+    title: "Canon EOS 70D",
+    image: "http://ecx.images-amazon.com/images/I/81U00AkAUWL._SX522_.jpg",
+    rating: 2.0,
+    price: 1099.0,
+    onSale: false
+  },
+  {
+    title: "Nikon D810A",
+    image:"http://ecx.images-amazon.com/images/I/91wtXIfLl2L._SX522_.jpg",
+    rating: 4.2,
+    price: 3796.95,
+    onSale: true
+  }
+]
 ```
 
-
-Questions
+## Questions
 
 * Why use `ng-src` and `ng-href`?
 * What are directives?
