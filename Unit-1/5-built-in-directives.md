@@ -1,4 +1,4 @@
-#Built-In Directives
+# Built-In Directives
 
 Directives are Angular's way of extending HTML.  Angular uses directives to add functionality to HTML elements and attributes. According to the docs:
 
@@ -27,7 +27,7 @@ Here's a complete-ish list of Angular's built-in directives in no particular ord
 * ng-style
 * ng-disabled
 * ng-readonly
-* ng-include 
+* ng-include
 * ng-switch
 * ng-controller
 * ng-view
@@ -43,43 +43,61 @@ Here's a complete-ish list of Angular's built-in directives in no particular ord
 
 We're going to start by talking about a few of the most common built-in directives
 
-###ng-repeat
+For a complete list see https://docs.angularjs.org/api/ng/directive
+
+### ng-repeat
 
 `ng-repeat` will iterate over a collection and create a template for every item in the collection.  Think of it as the Angular equivalent of a `forEach`.  It's extremely useful. Let's try an example:
 
 Let's start by defining a collection. In a controller, add the following:
 
-```
+```js
 	$scope.names = ["Harry", "Ron", "Hermione", "Sirius", "Hedwig", "Tonks"];
 ```
 
 Now let's iterate through the `names` array in the template.  In `index.html`(make sure you have declared `ng-controller` correctly) add the following:
 
+```html
+<ul>
+	<li ng-repeat="name in names">
+		{{name}}
+	 </li>
+</ul>
 ```
-	<ul>
-		<li ng-repeat="name in names">
-			{{name}}
-		 </li>
-	</ul>
+
+Question: what would happen if you put the `ng-repeat` directive on the `ul` element, like so?
+
+```html
+<ul ng-repeat="name in names">
+  <li>{{name}}</li>
+</ul>
 ```
-**EXERCISE: Add a property called `symbols` with the value `["&spades;", "&clubs;", "&hearts;", "&diams;"]`.  Use an `ng-repeat` to display each one in the template.  
-BONUS: Figure out how to make these entity codes actually display as symbols,like the following image**
+
+**EXERCISE**
+
+Add a property called `symbols` with the value `["&spades;", "&clubs;", "&hearts;", "&diams;"]`.  Use an `ng-repeat` to display each one in the template.  
+
+BONUS: Figure out how to make these entity codes actually display as symbols,like the following image:
 
 ![](http://content.screencast.com/users/ColtSteele1/folders/Jing/media/d75c95af-4729-4b8f-bf84-3b98a87f3213/00000003.png)
 
-**EXERICSE: Try using `ng-repeat` to iterate through an array with some duplicates, like `[1,1,2,5,6,9,9,9]`.  What happens?  Research how `ng-repeat` handles duplicate data and how to "fix" this issue.**
+**EXERICSE**
 
-**EXERCISE: Use `ng-repeat` to iterate through the attributes(keys) of an object and list them on in the template**
+Try using `ng-repeat` to iterate through an array with some duplicates, like `[1,1,2,5,6,9,9,9]`.  What happens?  Research how `ng-repeat` handles duplicate data and how to "fix" this issue.
+
+**EXERCISE**
+
+Use `ng-repeat` to iterate through the attributes (keys) of an object and list them on in the template
 
 ###ng-show/hide
 
 `ng-show` and `ng-hide` will show or hide a specific HTML element based off of a provided expression.  Let's take a look at some examples.
 
 ```
-	<div ng-show="3 + 4 == 5"> 
+	<div ng-show="3 + 4 == 5">
 		3 + 4 isn't 5, don't show
 	</div>
-	
+
 	<div ng-show="3 + 4 == 7">
 		3 + 4 is 7, do show
 	</div>
