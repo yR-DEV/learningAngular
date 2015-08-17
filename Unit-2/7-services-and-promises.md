@@ -20,7 +20,7 @@ app.factory('ContactList', function() {
   ContactList.contactList = [];
 
   ContactList.addContact = function(name, email, phone) {
-    contactList.data.push(name: name, email: email, phone: phone);
+    contactList.data.push({name: name, email: email, phone: phone});
   };
 
   ContactList.findContact = function(name) {
