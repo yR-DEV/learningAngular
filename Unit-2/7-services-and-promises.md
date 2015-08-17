@@ -19,8 +19,8 @@ app.factory('ContactList', function() {
 
   ContactList.contactList = [];
 
-  ContactList.addContact = function(name, email, phone) {
-    contactList.data.push({name: name, email: email, phone: phone});
+  ContactList.addContact = function(obj) {
+    ContactList.contactList.push(obj);
   };
 
   ContactList.findContact = function(name) {
