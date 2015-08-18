@@ -37,4 +37,6 @@ The next thing we'll want to do is serve up our application using some sort of s
 ## Questions
 
 * What are possible issues with this new file structure?
+* When thinking about extending the single responsibility principle to the app structure, what are some other ways that the app could be structured?
 * What are the differences between serving files from an http server and from the file system?  It seemed to work fine with just `open index.html` in the browser...
+* Reflecting on the new structure and thinking back to lesson 1 - is Angular an MVC framework? How does the app structure support/disprove that?
