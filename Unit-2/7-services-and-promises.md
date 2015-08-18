@@ -85,7 +85,7 @@ app.factory('omdbapi', ["$http", "$q", function($http, $q) {
     return decodeURIComponent(searchTerm);
   }
 
-  omdbservice.search(term) {
+  omdbservice.search = function(term) {
     if (term !== undefined) {
       omdbservice.setSearchTerm(term);
     }
