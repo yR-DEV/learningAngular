@@ -19,8 +19,8 @@ app.factory('ContactList', function() {
 
   ContactList.contactList = [];
 
-  ContactList.addContact = function(name, email, phone) {
-    contactList.data.push({name: name, email: email, phone: phone});
+  ContactList.addContact = function(obj) {
+    ContactList.contactList.push(obj);
   };
 
   ContactList.findContact = function(name) {
@@ -85,7 +85,7 @@ app.factory('omdbapi', ["$http", "$q", function($http, $q) {
     return decodeURIComponent(searchTerm);
   }
 
-  omdbservice.search(term) {
+  omdbservice.search = function(term) {
     if (term !== undefined) {
       omdbservice.setSearchTerm(term);
     }
