@@ -1,10 +1,10 @@
 # Angular Shopping Cart App
 
-## Click to watch the video:
+**Click to watch the video:**
 [![](https://i.gyazo.com/b83c4f06526777f552cb5d817c24e567.png)](https://vimeo.com/135907781)
 
 
-### Shopping Cart Should Have the Following Specs:
+**Shopping Cart Should Have the Following Specs:**
 - Search by name
 - Search by category with drop down list
 - Table with column for image,  and tea information
@@ -25,9 +25,9 @@
  - Ability to remove a product, which then updates the order total
  - Items in checkout show the caffeine scale, ingredients, rating, and sub-total
 
-### Data:
-
-```js
+**Data:**
+(make sure each key is in quotes to be valid JSON)
+```json
 [
 	{
 		_id: "55c8ee82152165d244b98300",
