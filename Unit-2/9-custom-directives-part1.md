@@ -40,8 +40,8 @@ Our `index.html` would look like this:
 A few things to notice with our new custom directive:
 
 1. Our directive is called `gsAngularLogo` but in the html we use it by calling it `gs-agnular-logo`.
-2. We prefixed our directive name with gs (galvanize school).  Adding a prefix is a good practice acording to angular so the chance of a name collision is minimized.
-3. The built in directives we've seen so far are called using attributes of an html tag.  For example: `<html ng-app="simpleDirectiveApp">`.  The `ng-app` directive is an attribute of the html tag.
+2. We prefixed our directive name with gs (galvanize school).  Acording to angular docs, adding a prefix is a good practice so that the chance of a name collision is minimized.
+3. The built in directives we've seen so far are called in the view by adding them as attributes of an html tag.  For example: `<html ng-app="simpleDirectiveApp">`.  The `ng-app` directive is an attribute of the html tag.
 
 These observations lead to a few topics:
 
@@ -67,7 +67,7 @@ This doesn't really make a lot of sense though.  Angular will add the img tag as
 
 **Best Practice**
 
-Use an angular directive as an attribute only when it modifies the tag.  Otherwise, create a separate element for the directive.
+Use an angular directive as an attribute only when it decorates a tag or somehow relates to it.  Otherwise, create a separate element for the directive.
 
 **EXERCISE**
 
@@ -176,7 +176,7 @@ What is accessible in the directive's scope?  How is data being passed to the di
 
 **EXERCISE**
 
-Modify the controller to have a list of yoyos.  Use an `ng-repeat` in the view to display all the yoyo's.  Make sure to use the custome directive!
+Modify the controller to have a list of yoyos.  Use an `ng-repeat` in the view to display all the yoyo's.  Make sure to use the custom directive!
 
 **EXERCISE**
 
