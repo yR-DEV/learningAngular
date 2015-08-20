@@ -1,4 +1,4 @@
-#Dependency Injection and Services
+#Dependency Injection
 
 **Dependency injection** is core feature to angular that helps us make more modular code.
 
