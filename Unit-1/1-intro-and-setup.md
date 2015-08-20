@@ -1,8 +1,6 @@
-#Introduction and Setup
+# Introduction and Setup
 
-###How This Curriculum Works
-
-This Angular curriculum is largely self-driven.  I'm giving you all the lessons for Unit 1 up front.  They are part tutorial, part homework assignment.  Be prepared to do some research of your own to complete these lessons.
+### How This Curriculum Works
 
 Here's an overview of the Angular content:
 
@@ -26,7 +24,7 @@ Unit 2:
  * Custom Services/Factories
  * Structuring Angular Apps for 2.0
  * Custom Directives
- 
+
 Unit 3:
 
  * Angular + Firebase Intro
@@ -39,11 +37,11 @@ Before you move on to the next lesson, you should:
 * Complete all exercises and SAVE EVERY EXERCISE FOR FUTURE USE
 * Answer all questions in ONE MARKDOWN FILE
 
-This is completely self-paced, but we will be tracking your individual progress.  In order to to do that, we will need to assess your knowledge as we go. **Be prepared to show your exercises to instructors and engage in discussions about the questions. We will record your performance** 
+Be prepared to show your exercises to instructors and engage in discussions about the questions.
 
 Let's get started!
 
-###What is Angular?
+### What is Angular?
 
 According to the official Angular introduction, Angular is a:
 
@@ -51,14 +49,14 @@ According to the official Angular introduction, Angular is a:
 
 It boils down to this: **Angular helps us build complex, single-page applications very quickly.**
 
-###Setup
+### Setup
 
 We're going to start by setting up a very simple Angular app. Soon we'll learn about patterns for structuring complicated Angular apps, but for now we're just going to use a single `index.html` file with a few scripts.
 
 * Create an `index.html` file.
 * Add Angular.  For now were going to use this CDN: `https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js`.
-* Add jQuery.  jQuery is (sort of) a dependency of Angular. 
-* Add `ng-app` to the `<html>` element in your document.  This declares everything inside of the `<html>` element part of an Angular app. We will see this 'ng' prefix a lot in Angular.
+* Add jQuery.  jQuery is (sort of) a dependency of Angular.
+* Add the `ng-app` attribute to the `<html>` element in your document.  This declares everything inside of the `<html>` element part of an Angular app. We will see this 'ng' prefix a lot in Angular.
 * Test it out!  Add the following line anywhere inside of the `<body>` tag: `{{1 + 6}}`.  Open the page in your browser.  If Angular is setup correctly, you should see `7` displayed.
 
 Questions:
@@ -68,9 +66,9 @@ Questions:
 * Is Angular an MVC framework?
 * Why did I say jQuery is "sort of" a dependency of Angular? Does it depend on it or not?!
 * Read the docs for `ng-app`. What is it and what does it do?
+* What does `ng` stand for?
 
 Resources:
 
 * [Angular Docs](https://docs.angularjs.org/api)
 * [Thinking in Angular](http://stackoverflow.com/questions/14994391/thinking-in-angularjs-if-i-have-a-jquery-background/15012542#15012542)
-
