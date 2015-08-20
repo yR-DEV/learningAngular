@@ -12,3 +12,8 @@ We've seen how to "read" data from Firebase, now let's explore implementing full
 
 [![](https://i.gyazo.com/f89d4433e569a3ca4b580e1a40481704.png)](https://vimeo.com/136794932)
 
+####Questions
+
+* What's the difference between the $firebaseObject and $firebaseArray services?  When would you use one vs. the other?
+* Explain is as much detail as possible what happens when we add an element to a synchronized array using $add().
+* Why do AngularFire methods return promises?
