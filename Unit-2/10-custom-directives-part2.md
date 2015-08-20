@@ -60,6 +60,9 @@ The `gsChangeBackground` directive could be more customizable.  Change the code 
 
 Make an image carousel.  The carousel should be made with a custom directive.  The directive should expect an array of images to be passed in via an attribute.  The directive should also add left and right arrows each with their own `ng-click`.  Make sure the directive has an isolated scope.
 
-[Click here for animated gif](https://s13.postimg.org/5lvbgxa0l/carousel_angular_animated.gif")
+[Click here for animated gif](http://s13.postimg.org/5lvbgxa0l/carousel_angular_animated.gif")
 
 
+**EXERCISE**
+
+Build on the previous custom directive.  Add a thumb nail view at the top of the carousel.  Only show the thumb nail view if there are 5 or move images in the carousel.  The thumbnail should show the previous 2 images, the current image, and the next 2 images.
