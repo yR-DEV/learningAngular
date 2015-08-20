@@ -1,4 +1,4 @@
-#Intro to Controllers
+# Intro to Controllers
 
 In MVC, controllers provide properties and functionality for use in the view.  Angular controllers are no different.  They are just functions that provide data for use in the views.
 
@@ -10,7 +10,7 @@ When a new controller is created, Angular automatically gives it a brand new `$s
 
 Let's write our first controller! Inside a new JS file `app.js` add
 
-```
+```js
 var app = angular.module("firstApp", []);
 app.controller("MyFirstController", function($scope){
 	$scope.name = "Severus Snape";
@@ -23,7 +23,7 @@ Back in our view, we need specify which module our `ng-app` should use.  Update 
 
 **Question: What are Angular modules?  Why use them?**
 
-We're declaring a new controller named "MyFirstController".  The first argument to `.controller()` is just the name of the new controller, and the second argument is a function that defines the functionality of the controller.  Inside of "MyFirstController", we're adding a `name` property to the `$scope` with the value "Severus Snape". 
+We're declaring a new controller named "MyFirstController".  The first argument to `.controller()` is just the name of the new controller, and the second argument is a function that defines the functionality of the controller.  Inside of "MyFirstController", we're adding a `name` property to the `$scope` with the value "Severus Snape".
 
 Note: This is just one way of writing a controller and adding properties to the `$scope`. We will discuss some others in the "Controllers Revisited" lesson.
 
@@ -33,7 +33,7 @@ Before we can access the `name` property, we need to specify which part of our t
 
 In `index.html`, add the following code:
 
-```
+```html
 	<div ng-controller="MyFirstController">
 	</div>
 ```
@@ -44,13 +44,13 @@ Now we have access to any properties that we set inside of MyFirstController, as
 
 Let's reuse our code from the very first example.  Try this
 
-```
+```html
 	<div ng-controller="MyFirstController">
 		<h1>My name is: {{name}}</h1>
 		<input ng-model="name" type="text" placeholder="What is your name">
 	</div>
-	
-```	
+
+```
 
 When you run this in your browser, you'll see that the initial value that we set for `name` in our controller is displayed both inside of the text `input` and in the `h1`.  When we refer to `name`, angular automatically looks for a property called `name` on the `$scope`.
 
@@ -58,27 +58,32 @@ Try moving the `h1` and `input` somewhere outside of the `div`.  Notice that we 
 
 **Why doesn't this cause an error message?**
 
-To wrap up, according to the Angular Docs you should use controllers to: 
+To wrap up, according to the Angular Docs you should use controllers to:
 
 * Set up the initial state of the $scope object.
 * Add behavior to the $scope object.
 
-**EXERCISE: Write another controller called "ExercisesController" which you will use for the next 3 exercises.**
+**EXERCISE**
 
-**EXERCISE: Add a property called `FavColor` and give it an initial value of your favorite color.  Display it in the view**
+**Step 1**: Write another controller called "ExercisesController" which you will use for the next 3 exercises.
 
-**EXERCISE: Add another property called `secondsInACentury`.  It should be equal to the number of seconds in a century(don't worry about leap years and leap seconds).  Make sure you actually calculate the answer with code, instead of just looking it up.  Finally, display the answer in your template inside of an `h3` tag.  Use a built-in filter to format the huge number with commas in the right place.**
-  
-**EXERCISE: Create a property called "rightNow" in the controller that is equal to the current time(use a built-in JS function to find the time)  Display it in the view and format it nicely(using a built-in filter) so that it looks something like this: Sunday, October 20, 2015**
+**Step 2**: Add a property called `FavColor` and give it an initial value of your favorite color.  Display it in the view.
 
-Questions: 
+**Step 3**: Add another property called `secondsInACentury`.  It should be equal to the number of seconds in a century (don't worry about leap years and leap seconds).  Make sure you actually calculate the answer with code, instead of just looking it up.  Finally, display the answer in your template inside of an `h3` tag.  Use a built-in filter to format the huge number with commas in the right place.
 
-* What the hell is `$scope`?
+**Step 4**: Create a property called `rightNow` in the controller that is equal to the current time(use a built-in JS function to find the time)  Display it in the view and format it nicely (using a built-in filter) so that it looks something like this:
+
+```
+Sunday, October 20, 2015
+```
+
+## Questions
+
+* What is `$scope`?
 * What are Angular modules?
 * Why do we pass in `$scope` as an argument to controller functions?
+* In Express, what are angular controllers most analogous to?
 
-Resources:
+## Resources:
 
 * [Controllers Docs](https://docs.angularjs.org/guide/controller)
-
-
