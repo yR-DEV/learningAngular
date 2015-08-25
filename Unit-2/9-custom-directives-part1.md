@@ -182,6 +182,8 @@ Modify the controller to have a list of yoyos.  Use an `ng-repeat` in the view t
 
 Create an app that uses the [pokemon api](http://pokeapi.co/docs/).  The app should first make a request to the pokedex to get all possible pokemon.  Then randomly select 5 pokemon to display.  The app should display the pokemon's name, types, name of moves (limit it to 6), and a sprite for the pokemon. Use a custom directive to display the pokemon.
 
+The app should use a custom directive for each pokemon (eg `pokemon-item`).
+
 **Bonus**: For the pokemon fans out there, write an algorithm that randomly picks two pokemon and decide who would win.  I do not know anything about the pokemon game, so this would be up to you to figure out.
 
 ![](http://s8.postimg.org/eo2kbbnb9/pokemon.png)
