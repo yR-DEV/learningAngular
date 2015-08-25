@@ -47,7 +47,7 @@ Let's setup the middlewares in our server.js file.
 
 **server.js:**
 
-```
+```javascript
 var express = require("express"),
 app = express(),
 bodyParser = require("body-parser"),
@@ -60,7 +60,7 @@ Now we'll add a route and set the port.
 **server.js:**
 
 
-```
+```javascript
  . . .
  
 app.get('/', function(req,res){
@@ -86,7 +86,7 @@ Check `localhost:3001` in your browser to see "Hello!".
 
 Fix any errors if there are any, and then proceed to setup the middlewares on the app, **server.js:**
 
-```
+```javascript
 var express = require("express"),
 app = express(),
 bodyParser = require("body-parser"),
@@ -114,7 +114,7 @@ Go in to you app directory and create a models folder.  We're going to create a 
 
 **models/icecream.js:** 
 
-```
+```javascript
 var mongoose = require("mongoose");
 
 var icecreamSchema = new mongoose.Schema({
@@ -130,7 +130,7 @@ module.exports = Icecream;
 
 As a best practice we'll create a `models/index.js` to connect to our database and include all of our models, **models/index.js:**
 
-```
+```javascript
 var mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost/icecream-db");
 
@@ -143,7 +143,7 @@ Now we need to add our database inside of our `server.js`, add it where all of t
 
 **server.js:**
 
-```
+```javascript
  . . . 
  db = require("./models");
  . . . 
@@ -165,7 +165,7 @@ Let's setup a router in our express app.
 
 **server.js:**
 
-```
+```javascript
 var apiRouter = express.Router();
 ```
 
@@ -173,7 +173,7 @@ Let's create two routes for icecreams, `index` and `post`.
 
 *index* and *post* in **server.js:**
 
-```
+```javascript
 apiRouter.route('/icecreams')
 .post(function(req,res){
   db.Icecream.create(req.body,function(error){
@@ -211,7 +211,7 @@ For the next part, create another ice cream using Postman so that we can confirm
 
 **server.js:**
 
-```
+```javascript
 apiRouter.route('/icecreams/:icecreamId')
 .get(function(req,res){
   db.Icecream.findById(req.params.icecreamId,function(error,icecream){
@@ -229,7 +229,7 @@ apiRouter.route('/icecreams/:icecreamId')
 
 Add the rest of the routes for edit and delete,  **server.js:**
 
-```
+```javascript
 apiRouter.route('/icecreams/:icecreamId')
 .get(function(req,res){
   db.Icecream.findById(req.params.icecreamId,function(error,icecream){
