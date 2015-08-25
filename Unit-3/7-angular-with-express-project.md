@@ -8,7 +8,7 @@ Make a root path to go to a newly created `index.ejs` page, and update the route
 
 the changes should look like this, **server.js:**
 
-```
+```javascript
 app.use('/api', apiRouter);
 
 // ROOT
@@ -21,7 +21,7 @@ Now you can add AngularJS, Bootstrap, and any other supporting files in to **vie
 
 (double check which versions you want to use!)
 
-```
+```html
 <!DOCTYPE html>
 <html>
   <head>
@@ -43,7 +43,7 @@ Now you can add AngularJS, Bootstrap, and any other supporting files in to **vie
 
 Notice the `js/angular/app.js`, your angular app will reside in `public/js/angular/app.js`.  All angular related javascript files will be in the `publi/js/angular` folder, and included like this:
 
-```
+```html
  <script src="js/angular/[NAME OF YOUR ANGULAR FILE].js"></script>
 ```
 
@@ -51,7 +51,7 @@ Your index view for the index route of ice-cream can be placed in `public/views/
 
 Add some simple HTML to test that this view works, **public/views/icecreams/index.html:**
 
-```
+```html
 	<h1>Hi from the icecream index view!</h1>
 ```
 
