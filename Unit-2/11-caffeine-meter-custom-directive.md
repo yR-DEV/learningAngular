@@ -5,6 +5,7 @@ In this exercise, we're going to revisit the angular tea shopping cart and creat
 **The caffeine display should look something like this:**
 ![](https://i.gyazo.com/666d37af0d208915f33386ee47e80fb5.png)
 
+ The CSS for the caffeine meter can be obtained from here: [Caffeine Meter CSS](http://codepen.io/Sambego/pen/zKLar)
 
 **The code should look someting like this:**
 
@@ -13,3 +14,6 @@ In this exercise, we're going to revisit the angular tea shopping cart and creat
 ```
 
 ![](https://i.gyazo.com/8c1d4c68b881d8a0431202e3b7469c8e.png)
+
+
+
