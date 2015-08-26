@@ -185,7 +185,7 @@ contactsApp.config(['$httpProvider', function($httpProvider) {
 }]);
 ```
 
-And this to your `app/assets/javascripts/angular/controllers.js`:
+Add this to your `app/assets/javascripts/angular/controllers.js`:
 
 ```js
 contactsApp.controller("ContactsController", ['$scope', function($scope) {
