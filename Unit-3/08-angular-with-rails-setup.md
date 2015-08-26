@@ -133,6 +133,27 @@ Also, since we are not using rails views from our controllers, remove the `<%= y
 </html>
 ```
 
+Lastly, turbolinks is a gem that rails uses to cache ajax requests.  It can cause problems with angular, so let's remove it:
+
+In the `app/assets/javascript/applications.js`, **remove** this line:
+
+```js
+//= require turbolinks
+```
+
+Also, you need to **remove** the following line from the `Gemfile`:
+
+```ruby
+gem 'trubolinks'
+```
+
+And finally, in `app/views/layouts/application.html.erb`, change your `javascript_include_tag` to not include turbolinks:
+
+```html
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+```
+
+
 **EXERCISE**
 
 Go to the root of your application and see what happens.  Are we getting the angular app to show up?  Why not?  What could you do to your applicatoin to get it to return the layout when the user visits the root path.  **HINT** You'll probably have to change the `routes.rb` file and add a new controller.
