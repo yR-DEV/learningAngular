@@ -16,4 +16,4 @@ We've seen how to "read" data from Firebase, now let's explore implementing full
 
 * What's the difference between the $firebaseObject and $firebaseArray services?  When would you use one vs. the other?
 * Explain is as much detail as possible what happens when we add an element to a synchronized array using $add().
-* Why do AngularFire methods return promises?
+* Why do AngularFire methods return promises?  How do you use them?
