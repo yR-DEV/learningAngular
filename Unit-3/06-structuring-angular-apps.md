@@ -4,7 +4,7 @@ Let's take a look at how to structure larger Angular apps, using this refactored
 
 Watch the following video for walkthrough of the major changes.  
 
-[VIDEO LINK(temporary until video finished uploading)](https://vimeo.com/137453520)
+[![](https://i.gyazo.com/a42f9a376f08e25b5b6d9ba8966fa8c0.png)](https://vimeo.com/137453520)
 
 The most obvious change is to folder structure. Files are now grouped by feature:
 
