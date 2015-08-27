@@ -26,11 +26,12 @@ Unit 2:
 
 Unit 3:
 
- * Firebase Intro
- * AngularFire Intro
- * AngularFire Arrays and CRUD
- * AngularFire Project
- * AngularFire Auth
- * Angular + Rails Setup
- * Angular + Express Setup
- * Angular + Express Project
+ * [Firebase Intro](/Unit-3/01-firebase-intro.md)
+ * [AngularFire Intro](/Unit-3/02-angularfire-intro.md)
+ * [AngularFire Arrays and CRUD](/Unit-3/03-angularfire-arrays-and-crud.md)
+ * [AngularFire Project](/Unit-3/04-angularfire-project.md)
+ * [AngularFire Auth](/Unit-3/05-angularfire-auth.md)
+ * [Angular Structure and Style](/Unit-3/06-structuring-angular-apps.md)
+ * [Angular + Express Setup](/Unit-3/07-angular-with-express-setup.md)
+ * [Angular + Express Project](/Unit-3/08-angular-with-express-project.md)
+ * [Angular + Rails Setup](/Unit-3/09-angular-with-rails-setup.md)
