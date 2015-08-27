@@ -44,38 +44,66 @@ Before you move on to the next lesson, you should:
 * Complete all exercises and SAVE EVERY EXERCISE FOR FUTURE USE
 * Answer all questions in ONE MARKDOWN FILE
 
-Be prepared to show your exercises to instructors and engage in discussions about the questions.
+Be prepared to review your exercises with instructors and peers as well as engage in discussions about the questions.
 
 Let's get started!
 
 ### What is Angular?
 
-According to the official Angular introduction, Angular is a:
+According to the official Angular introduction, Angular is a-
 
 > client-side technology, written entirely in JavaScript. It works with the long-established technologies of the web (HTML, CSS, and JavaScript) to make the development of web apps easier and faster than ever before.
 
 It boils down to this: **Angular helps us build complex, single-page applications very quickly.**
 
-### Setup
+### Hello, Angular!
 
-We're going to start by setting up a very simple Angular app. Soon we'll learn about patterns for structuring complicated Angular apps, but for now we're just going to use a single `index.html` file with a few scripts.
+We're going to start by setting up a very simple Angular app to say Hello World - Angular-style!
 
-* Create an `index.html` file.
-* Add Angular.  For now were going to use this CDN: `https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js`.
-* Add jQuery.  jQuery is (sort of) a dependency of Angular.
-* Add the `ng-app` attribute to the `<html>` element in your document.  This declares everything inside of the `<html>` element part of an Angular app. We will see this 'ng' prefix a lot in Angular.
-* Test it out!  Add the following line anywhere inside of the `<body>` tag: `{{1 + 6}}`.  Open the page in your browser.  If Angular is setup correctly, you should see `7` displayed.
+Staying true to an iterative approach to coding, we'll start slow, defining everything (markup and Angular syntax) within a single `index.html` file - a true single page app! - and scale from there, learning about patterns for structuring complicated Angular apps.
 
-Questions:
+1. Create an `index.html` file.
+1. Add the Angular dependency. For now, we're going to utilize a CDN - `https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js`.
+1. Add the `ng-app` attribute to the `<html>` element in your document. This indicates that *everything* inside of the `<html>` element - from the opening to closing tag - is part of an Angular app. In other words, all Angular code/tags that fall inside the `<html>` element will be rendered by the Angular interpreter. *Get used to that `ng` prefix as you will be seeing it A LOT!*
+1. Test it out! Add the following Angular tag anywhere inside of the `<body>` tag - `<p>{{1 + 6}}<p>`. Open the page in your browser. If all is well then you should see `7`.
+1. Finally, update the title element - `<title>{{ greeting }} World</title>` - and add the following two paragraphs:
+  ```html
+  <p>Say something to the world <input type="text" ng-model="greeting" ng-init="greeting='Hello, '"></p>
+  <p>{{ greeting }} world!</p>
+  ```
+
+1. Test this out. Enter something in the input box and watch the DOM update! Note the new `ng-`attributes - you will learn more about them soon.
+
+#### Final Code
+
+```html
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ greeting }} World</title>
+  </head>
+  <body>
+    <p>{{1 + 6}}<p>
+    <br>
+    <p>Say something to the world <input type="text" ng-model="greeting" ng-init="greeting='Hello, '"></p>
+    <p>{{ greeting }} world!</p>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
+  </body>
+</html>
+```
+
+<hr>
+
+**Questions:**
 
 * Why learn Angular JS over other frameworks like Ember, Backbone, Knockout, etc?
-* People have some very strong opinions about Angular.  What are 3 common complaints people have about Angular?
-* Is Angular an MVC framework?
-* Why did I say jQuery is "sort of" a dependency of Angular? Does it depend on it or not?!
-* Read the docs for `ng-app`. What is it and what does it do?
-* What does `ng` stand for?
+* People have some very strong opinions about Angular. What are 3 common complaints people have about Angular?
+* Is Angular an MVC framework? [Why MVC](./examples/why-mvc.md)?
+* Turn to the Angular docs. Find `ng-app`. What is it and what does it do? What does `ng` stand for?
 
-Resources:
+**Resources:**
 
 * [Angular Docs](https://docs.angularjs.org/api)
 * [Thinking in Angular](http://stackoverflow.com/questions/14994391/thinking-in-angularjs-if-i-have-a-jquery-background/15012542#15012542)
+* [AngularJS by Example - Building a Bitcoin Investment Calculator](https://github.com/mjhea0/thinkful-angular)
