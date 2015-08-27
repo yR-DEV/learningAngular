@@ -1,6 +1,6 @@
 #AngularFire Arrays and CRUD
 
-We've seen how to "read" data from Firebase, now let's explore implementing full CRUD with a sample todo list app.  Watch the following video:
+We've seen how to "read" data from Firebase, now let's explore implementing full CRUD with a sample Todo List App.  Watch the following video:
 
 [![](https://i.gyazo.com/aaf7ab14cf309326bbcc820cca35dfe4.png)](https://vimeo.com/136793940)
 
