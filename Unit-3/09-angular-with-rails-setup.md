@@ -171,16 +171,35 @@ Rails.application.routes.draw do
 end
 ```
 
-And your new `StaticsController` should look like this:
+You could add a method to 	`app/controllers/applicaiton_controller.rb` that helps us render the layout file when we need it:
+
+```ruby
+class ApplicationController < ActionController::Base
+  # Prevent CSRF attacks by raising an exception.
+  # For APIs, you may want to use :null_session instead.
+  protect_from_forgery with: :exception
+
+  protected
+    def html_layout
+      # check the request format
+      if request.format.symbol == :html
+        render "layouts/application"
+      end
+    end
+end
+
+```
+
+Next, add a new `StaticsController` like this:
 
 ```
 class StaticsController < ApplicationController
+  before_action :html_layout
+  
   def index
   end
 end
 ```
-
-You'll also have to create a file `app/views/statics/index.html.erb` that is empty so that rails doesn't give you an error.
 
 Now your rails app should return your layout page when you visit the root route and angular should load.
 
@@ -191,7 +210,6 @@ Next, we want to add some angular code to our rails app.  Inside `app/assets/jav
 ```js
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require angular/app
 //= require_tree .
 ```
@@ -206,7 +224,9 @@ contactsApp.config(['$httpProvider', function($httpProvider) {
 }]);
 ```
 
-Add this to your `app/assets/javascripts/angular/controllers.js`:
+Also, we need a place to put out partials (when you eventually start using the angular router).  In the `public` directory, make a new directory called `partials`.  Add an empty file inside of the `partials` directory called `.keep` just so the directory if you want to check this into github.
+
+Next, Add this to your `app/assets/javascripts/angular/controllers.js`:
 
 ```js
 contactsApp.controller("ContactsController", ['$scope', function($scope) {
@@ -236,11 +256,11 @@ Lastly, in your `app/views/layouts/application.html.erb`, modify the layout to l
 
 **EXERCISE**
 
-Verify that you're seeing the variable from the `$scope` that you expect.  Also, verify that the order of the javascript files included in your applicaiton is correct.  Remember, app.js should be included before any of your other angular files.
+Verify that you're seeing the variable from the `$scope` that you expect.  Also, verify that the order of the javascript files included in your applicaiton is correct.  Remember, `app.js` should be included before any of your other angular files.
 
 **EXERCISE**
 
-Now that you have a working backend and a working angular front end, redo your angular contacts app with rails as your backend.  **HINT**:  You probably want to use an `ng-view` directive and the angular router so that you don't have to write a bunch of your code in the layout.  Also, you are going to have to make ajax calls to your rails backend using the `$http` services.
+Now that you have a working backend and a working angular front end, redo your angular contacts app with rails as your backend.  **HINT**:  You probably want to use an `ng-view` directive and the angular router so that you don't have to write a bunch of your code in the layout.  Also, you are going to have to make ajax calls to your rails backend using the `$http` services.  You can look at [this contacts-angular-rails app](https://github.com/gSchool/contacts-app-angular-rails) as starter code if you cannot get something working.
 
 **BONUS**
 
