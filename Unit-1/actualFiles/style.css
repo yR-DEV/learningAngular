@@ -9,3 +9,12 @@
 .valid {
   background-color: green;
 }
+
+.cameraImage {
+  height: 75px;
+  width: 90px;
+}
+
+.onSale {
+  color: orange;
+}
