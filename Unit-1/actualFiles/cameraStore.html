@@ -7,8 +7,15 @@
   </head>
   <body ng-controller="Cameras">
     <h1>Camera Shop</h1>
-    
-    <div ng-repeat="camera in cameras">
+    <select ng-model="theFilter">
+      <option value="price">
+        Price
+      </option>
+      <option value="rating">
+        Rating
+      </option>
+    </select>
+    <div ng-repeat="camera in cameras | orderBy: theFilter">
       <h2>
         {{camera.title}}
       </h2>
