@@ -1,0 +1,11 @@
+.highlight {
+  background-color: yellow;
+}
+
+.invalid {
+  background-color: red;
+}
+
+.valid {
+  background-color: green;
+}
