@@ -4,12 +4,15 @@ app.controller("NavBar", function($scope) {
   // console.log('in nav bar');
   $scope.newPostBool = false;
 
+  var newD = new Date();
+
   $scope.posts = [{
     title: "Some Title",
     author: "Some Author",
     imageURL: "http://i.imgur.com/TcmVKyPb.jpg",
     description: "Some Description",
-    votes: 0
+    votes: 0,
+    date: newD
   }];
 
   $scope.showNewPostForm = function() {

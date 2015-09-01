@@ -30,9 +30,9 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sort By: {{sortPostsByWhat}}<span class="caret"></span></a>
                 <ul class="dropdown-menu" ng-model="sortPostsBy">
-                  <li><a href="#" ng-click="sortPostsBy('Votes')">Votes</a></li>
-                  <li><a href="#" ng-click="sortPostsBy('Date')">Date</a></li>
-                  <li><a href="#" ng-click="sortPostsBy('Title')">Title</a></li>
+                  <li><a href="#" ng-click="sortPostsBy('votes')">Votes</a></li>
+                  <li><a href="#" ng-click="sortPostsBy('date')">Date</a></li>
+                  <li><a href="#" ng-click="sortPostsBy('title')">Title</a></li>
                   <!-- <li role="separator" class="divider"></li>
                   <li><a href="#">Separated link</a></li>
                   <li role="separator" class="divider"></li>
@@ -83,7 +83,7 @@
           <input class="btn btn-default" type="submit" value="Submit Post!" ng-click="postIt()">        </form>
       </div>
 
-      <div ng-repeat="post in posts" class="postsDiv">
+      <div ng-repeat="post in posts | filter:sortPostsByWhat" class="postsDiv">
         <p class="postTitle">
           {{post.title}} |  <span class="glyphicon glyphicon-arrow-up" aria-hidden="true" ng-click="changeVotes('up', post)"></span> <span class="glyphicon glyphicon-arrow-down" aria-hidden="true" ng-click="changeVotes('down', post)"></span>
           <span ng-class="{postPositive: post.votes > 0, postNegative: post.votes < 0}">
@@ -92,6 +92,9 @@
         </p>
         <p class="postAuthor">
           {{post.author}}
+        </p>
+        <p class="postDescription">
+          {{post.description}}
         </p>
         <img ng-src="{{post.imageURL}}" class="postImg">
       </div>

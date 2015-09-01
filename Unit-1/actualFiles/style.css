@@ -43,9 +43,13 @@
 }
 
 .postImg {
-  margin-top: -50px;
+  margin-top: -83px;
   margin-left: 10px;
   margin-bottom: 10px;
+}
+
+.postDescription {
+  margin-left: 250px;
 }
 
 .postPositive {
