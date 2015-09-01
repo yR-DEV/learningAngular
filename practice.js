@@ -1,19 +1,38 @@
-var DistanceObj = function(x1, y1) {
-  this.x1 = x1;
-  this.y1 = y1;
+var string = "Mississippi";
+sub = string.indexOf("xxs");
+
+console.log(sub);
+
+var names = ['dan', 'steve', 'derek', 'james'];
+var subStr = "rek";
+
+var search = function(arr, sub) {
+  var tempArr = [];
+  var tempMatchCount = 0;
+
+  arr.forEach(function(item) {
+
+    var tempItem = item.split('');
+    var tempSub = sub.split('');
+    for(var i= 0; i < tempItem.length; i++) {
+      for(var j = 0; j < tempSub.length; j++) {
+        if(tempItem[i] == tempSub[j]) {
+          tempMatchCount += 1;
+        }
+      }
+    }
+    if(tempMatchCount >= tempItem.length - 1) {
+      tempArr.push(tempItem.join(''));
+    }
+
+    // if(item.indexOf(sub) !== -1) {
+    //   tempArr.push(item);
+    // } else {
+    //   console.log('no match');
+    // }
+  });
+
+  return tempArr;
 };
 
-
-DistanceObj.prototype.whoIsClosest = function(playerNode1, playerNode2, playerNode3, playerNode4, playerNode5, flagNode) {
-
-  var p1 = Math.hypot(flagNode.x - playerNode1)
-
-}
-
-p1 = new DistanceObj(0, 1);
-p2 = new DistanceObj(2, 1);
-p3 = new DistanceObj(4, 4);
-p4 = new DistanceObj(4, 2);
-p5 = new DistanceObj(1, 4);
-
-DistanceObj,
+console.log(search(names, subStr));
