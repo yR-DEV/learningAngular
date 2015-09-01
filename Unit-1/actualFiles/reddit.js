@@ -13,6 +13,14 @@ app.controller("NavBar", function($scope) {
     description: "Some Description",
     votes: 0,
     date: newD
+  },
+  {
+    title: "Some Other Title",
+    author: "Some Other Author",
+    imageURL: "http://i.imgur.com/KiyCMMTb.jpg",
+    description: "Some Other Description",
+    votes: 0,
+    date: newD
   }];
 
   $scope.showNewPostForm = function() {
@@ -25,7 +33,11 @@ app.controller("NavBar", function($scope) {
   };
 
   $scope.sortPostsBy = function(str) {
-    $scope.sortPostsByWhat = str;
+    if(str === '-value') {
+      $scope.sortPostsByWhat = 'value';
+    } else {
+      $scope.sortPostsByWhat = str;
+    }
   };
 
   $scope.changeVotes = function(bool, post) {
