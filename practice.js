@@ -4,7 +4,7 @@ sub = string.indexOf("xxs");
 console.log(sub);
 
 var names = ['dan', 'steve', 'derek', 'james'];
-var subStr = "rek";
+var subStr = "dan";
 
 var search = function(arr, sub) {
   var tempArr = [];
@@ -14,16 +14,13 @@ var search = function(arr, sub) {
 
     var tempItem = item.split('');
     var tempSub = sub.split('');
-    for(var i= 0; i < tempItem.length; i++) {
-      for(var j = 0; j < tempSub.length; j++) {
-        if(tempItem[i] == tempSub[j]) {
-          tempMatchCount += 1;
-        }
-      }
-    }
-    if(tempMatchCount >= tempItem.length - 1) {
-      tempArr.push(tempItem.join(''));
-    }
+    var tempStr = "";
+
+    tempSub = tempSub.reduce(function(a, a1) {
+      return a+".*"+a1;
+    });
+    return (new RegExp(tempSub)).test(item);
+
 
     // if(item.indexOf(sub) !== -1) {
     //   tempArr.push(item);
@@ -35,4 +32,5 @@ var search = function(arr, sub) {
   return tempArr;
 };
 
-console.log(search(names, subStr));
+
+// console.log(memorie(names, subStr));
