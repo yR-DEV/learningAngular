@@ -17,7 +17,8 @@ app.controller("NavBar", function($scope) {
       commentAuthor: "Some Other Comment Author",
       commentText:"some other comments are here"
     }],
-    newCommentBool: false
+    newCommentBool: false,
+    showCommentsBool: false
   },
   {
     title: "Some Other Title",
@@ -29,8 +30,12 @@ app.controller("NavBar", function($scope) {
     comments: [{
       commentAuthor: "Some Other Comment Author",
       commentText:"some other comments are here"
+    }, {
+      commentAuthor: "Some Other Comment Author",
+      commentText:"some other comments are here"
     }],
-    newCommentBool: false
+    newCommentBool: false,
+    showCommentsBool: false
   }];
 
   $scope.showNewPostForm = function() {
@@ -77,6 +82,18 @@ app.controller("NavBar", function($scope) {
   $scope.postNewComment = function(post, newComment) {
     post.newCommentBool = false;
     post.comments.push({commentAuthor: newComment.author, commentText: newComment.text});
+  };
+
+  $scope.showComments = function(post) {
+    console.log('in show comments');
+    console.log(post.showCommentsBool);
+    if(post.showCommentsBool === false) {
+      // console.log(post.showCommentsBool);
+      post.showCommentsBool = true;
+      // console.log(post.showCommentsBool);
+    } else {
+      post.showCommentsBool = false;
+    }
   };
 
 });

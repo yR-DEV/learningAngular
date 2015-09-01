@@ -99,7 +99,8 @@
         <img ng-src="{{post.imageURL}}" class="postImg">
         <p class="postDate">
           {{post.date | date:'medium'}} | <span class="postComments">
-            {{post.comments.length}} comments
+            <span ng-show="post.comments.length === 1" ng-click="showComments(post)">{{post.comments.length}} comment</span>
+            <span ng-show="post.comments.length !== 1" ng-click="showComments(post)">{{post.comments.length}} comments</span>
           </span> | <span class="addComment" ng-click="addNewComment(post)">Add Comment</span>
         </p>
         <div class="postNewComment">
@@ -109,6 +110,16 @@
             <label for="postCommentsAuthor">Author: </label>
             <input type="text" class="form-control" id="postCommentsAuthor" ng-model="newComment.author" placeholder="Author?">
             <input class="btn btn-default" type="submit" value="Submit Comment!" ng-click="postNewComment(post, newComment)">        </form>
+          </div>
+        </div>
+        <div ng-show="post.showCommentsBool">
+          <div ng-repeat="comment in post.comments">
+            <p>
+              author: {{comment.commentAuthor}}
+            </p>
+            <p>
+              comment: {{comment.commentText}}
+            </p>
           </div>
         </div>
       </div>
