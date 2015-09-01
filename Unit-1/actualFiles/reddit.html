@@ -99,12 +99,17 @@
         <img ng-src="{{post.imageURL}}" class="postImg">
         <p class="postDate">
           {{post.date | date:'medium'}} | <span class="postComments">
-            comment
+            {{post.comments.length}} comments
           </span> | <span class="addComment" ng-click="addNewComment(post)">Add Comment</span>
         </p>
-        <div class="form-group" ng-show="post.newCommentBool">
-          <label for="postComments">Comments: </label>
-          <input type="text" class="form-control" id="postComments" placeholder="Comments?">
+        <div class="postNewComment">
+          <div class="form-group" ng-show="post.newCommentBool">
+            <label for="postComments">Comments: </label>
+            <input type="text" class="form-control" id="postComments" placeholder="Comments?">
+            <label for="postCommentsAuthor">Author: </label>
+            <input type="text" class="form-control" id="postCommentsAuthor" placeholder="Author?">
+            <input class="btn btn-default" type="submit" value="Submit Comment!" ng-click="postNewComment(post)">        </form>
+          </div>
         </div>
       </div>
 

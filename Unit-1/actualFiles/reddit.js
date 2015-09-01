@@ -13,10 +13,10 @@ app.controller("NavBar", function($scope) {
     description: "Some Description",
     votes: 0,
     date: newD,
-    comments: {
+    comments: [{
       commentAuthor: "Some Other Comment Author",
-      comments:"some other comments are here"
-    },
+      commentText:"some other comments are here"
+    }],
     newCommentBool: false
   },
   {
@@ -26,10 +26,10 @@ app.controller("NavBar", function($scope) {
     description: "Some Other Description",
     votes: 0,
     date: newD,
-    comments: {
+    comments: [{
       commentAuthor: "Some Other Comment Author",
-      comments:"some other comments are here"
-    },
+      commentText:"some other comments are here"
+    }],
     newCommentBool: false
   }];
 
@@ -61,6 +61,10 @@ app.controller("NavBar", function($scope) {
   $scope.addNewComment = function(post) {
     post.newCommentBool = true;
   };
+
+  $scope.postNewComment = function(post) {
+    post.newCommentBool = false;
+  }
 
 });
 

@@ -56,6 +56,11 @@
   margin-left: 200px;
 }
 
+.postNewComment {
+  width: 90%;
+  margin: auto;
+}
+
 .postPositive {
   color: green;
 }
