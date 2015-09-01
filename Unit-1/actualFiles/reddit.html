@@ -28,15 +28,15 @@
               <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
               <li><a href="#" ng-click="showNewPostForm()">New Post</a></li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sort By: {{sortPostsByWhat}}<span class="caret"></span></a>
+                <ul class="dropdown-menu" ng-model="sortPostsBy">
+                  <li><a href="#" ng-click="sortPostsBy('Votes')">Votes</a></li>
+                  <li><a href="#" ng-click="sortPostsBy('Date')">Date</a></li>
+                  <li><a href="#" ng-click="sortPostsBy('Title')">Title</a></li>
+                  <!-- <li role="separator" class="divider"></li>
                   <li><a href="#">Separated link</a></li>
                   <li role="separator" class="divider"></li>
-                  <li><a href="#">One more separated link</a></li>
+                  <li><a href="#">One more separated link</a></li> -->
                 </ul>
               </li>
             </ul>
@@ -62,7 +62,7 @@
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>
-      <div ng-show="newPostBool">
+      <div ng-show="newPostBool" class="newPostForm">
         <form>
           <div class="form-group">
             <label for="newPostTitle">Title: </label>

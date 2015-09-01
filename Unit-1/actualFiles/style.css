@@ -18,3 +18,8 @@
 .onSale {
   color: orange;
 }
+
+.newPostForm {
+  width: 90%;
+  margin: auto;
+}

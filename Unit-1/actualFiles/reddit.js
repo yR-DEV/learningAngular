@@ -13,9 +13,13 @@ app.controller("NavBar", function($scope) {
     $scope.newPostBool = false;
   };
 
+  $scope.sortPostsBy = function(str) {
+    $scope.sortPostsByWhat = str;
+  };
+
 });
 
-app.controller("NewPostForm", function($scope) {
+app.controller("Posts", function($scope) {
   console.log($scope.newPostBool);
 
 });
