@@ -74,9 +74,10 @@ app.controller("NavBar", function($scope) {
     post.newCommentBool = true;
   };
 
-  $scope.postNewComment = function(post) {
+  $scope.postNewComment = function(post, newComment) {
     post.newCommentBool = false;
-  }
+    post.comments.push({commentAuthor: newComment.author, commentText: newComment.text});
+  };
 
 });
 

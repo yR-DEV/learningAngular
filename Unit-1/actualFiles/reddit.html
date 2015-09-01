@@ -105,10 +105,10 @@
         <div class="postNewComment">
           <div class="form-group" ng-show="post.newCommentBool">
             <label for="postComments">Comments: </label>
-            <input type="text" class="form-control" id="postComments" placeholder="Comments?">
+            <input type="text" class="form-control" id="postComments" ng-model="newComment.text" placeholder="Comments?">
             <label for="postCommentsAuthor">Author: </label>
-            <input type="text" class="form-control" id="postCommentsAuthor" placeholder="Author?">
-            <input class="btn btn-default" type="submit" value="Submit Comment!" ng-click="postNewComment(post)">        </form>
+            <input type="text" class="form-control" id="postCommentsAuthor" ng-model="newComment.author" placeholder="Author?">
+            <input class="btn btn-default" type="submit" value="Submit Comment!" ng-click="postNewComment(post, newComment)">        </form>
           </div>
         </div>
       </div>
