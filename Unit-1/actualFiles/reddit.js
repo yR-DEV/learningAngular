@@ -38,8 +38,20 @@ app.controller("NavBar", function($scope) {
     $scope.newPostBool = true;
   };
 
-  $scope.postIt = function() {
+  $scope.postIt = function(newPost) {
+    var postDate = new Date();
+
     $scope.newPostBool = false;
+    $scope.posts.push({
+      title: newPost.title,
+      author: newPost.author,
+      imageURL: newPost.imageURL,
+      description: newPost.description,
+      votes: 0,
+      date: postDate,
+      comments:[],
+      newCommentBool: false
+    });
   };
 
   $scope.sortPostsBy = function(str) {
