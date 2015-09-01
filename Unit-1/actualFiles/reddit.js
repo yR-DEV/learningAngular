@@ -12,7 +12,12 @@ app.controller("NavBar", function($scope) {
     imageURL: "http://i.imgur.com/TcmVKyPb.jpg",
     description: "Some Description",
     votes: 0,
-    date: newD
+    date: newD,
+    comments: {
+      commentAuthor: "Some Other Comment Author",
+      comments:"some other comments are here"
+    },
+    newCommentBool: false
   },
   {
     title: "Some Other Title",
@@ -20,7 +25,12 @@ app.controller("NavBar", function($scope) {
     imageURL: "http://i.imgur.com/KiyCMMTb.jpg",
     description: "Some Other Description",
     votes: 0,
-    date: newD
+    date: newD,
+    comments: {
+      commentAuthor: "Some Other Comment Author",
+      comments:"some other comments are here"
+    },
+    newCommentBool: false
   }];
 
   $scope.showNewPostForm = function() {
@@ -46,6 +56,10 @@ app.controller("NavBar", function($scope) {
     } else {
       post.votes += 1;
     }
+  };
+
+  $scope.addNewComment = function(post) {
+    post.newCommentBool = true;
   };
 
 });

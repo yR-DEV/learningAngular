@@ -52,6 +52,10 @@
   margin-left: 250px;
 }
 
+.postDate {
+  margin-left: 200px;
+}
+
 .postPositive {
   color: green;
 }
