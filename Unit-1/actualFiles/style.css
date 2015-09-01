@@ -68,3 +68,8 @@
 .postNegative {
   color: red;
 }
+
+.error {
+  color: red;
+  font-weight: bold;
+}

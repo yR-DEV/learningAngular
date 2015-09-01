@@ -63,14 +63,30 @@
         </div><!-- /.container-fluid -->
       </nav>
       <div ng-show="newPostBool" class="newPostForm">
-        <form>
+        <form name="newPostForm" novalidate>
           <div class="form-group">
             <label for="newPostTitle">Title: </label>
-            <input type="text" name="newPostT" class="form-control" id="newPostTitle" ng-model="newPost.title" ng-minlength=5 placeholder="Title?">
+            <input type="text" name="newTitle" required ng-minlength=5 class="form-control" id="newPostTitle" ng-model="newPost.title" required placeholder="Title?">
+            <div class="error" ng-show="newPostForm.newTitle.$dirty && newPostForm.newTitle.$invalid">
+              <div class="error" ng-show="newPostForm.newTitle.$error.required">
+                A new post requires a title.
+              </div>
+              <div class="error" ng-show="newPostForm.newTitle.$error.minlength">
+                Your Title is not long enough.
+              </div>
+            </div>
           </div>
           <div class="form-group">
             <label for="newPostAuthor">Author: </label>
-            <input type="text" class="form-control" id="newPostAuthor" ng-model="newPost.author" placeholder="Author?">
+            <input type="text" name="newAuthor" required ng-minlength=3 class="form-control" required ng-minlength=3 id="newPostAuthor" ng-model="newPost.author" placeholder="Author?">
+            <div class="error" ng-show="newPostForm.newAuthor.$dirty && newPostForm.newAuthor.$invalid">
+              <div class="error" ng-show="newPostForm.newAuthor.$error.required">
+                Sorry, you need a handle.
+              </div>
+              <div class="error" ng-show="newPostForm.newAuthor.$error.minlength">
+                At least 3 charcters.
+              </div>
+            </div>
           </div>
           <div class="form-group">
             <label for="newPostImageURL">ImageURL: </label>
