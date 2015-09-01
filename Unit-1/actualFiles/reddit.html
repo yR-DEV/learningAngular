@@ -90,13 +90,26 @@
           </div>
           <div class="form-group">
             <label for="newPostImageURL">ImageURL: </label>
-            <input type="text" class="form-control" id="newPostImageURL" ng-model="newPost.imageURL" placeholder="Img URL?">
+            <input type="url" class="form-control" name="newImageURL" required id="newPostImageURL" ng-model="newPost.imageURL" placeholder="Img URL?">
+            <div class="error" ng-show="newPostForm.newImageURL.$dirty && newPostForm.newImageURL.$invalid">
+              <div class="error" ng-show="newPostForm.newImageURL.$error.required">
+                You need an image URL to make a new post.
+              </div>
+            </div>
           </div>
           <div class="form-group">
             <label for="newPostDescription">Description: </label>
-            <input type="text" class="form-control" id="newPostDescription" ng-model="newPost.description" placeholder="Description?">
+            <input type="text" class="form-control" name="newDescription" required ng-minlength=10 id="newPostDescription" ng-model="newPost.description" placeholder="Description?">
+            <div class="error" ng-show="newPostForm.newDescription.$dirty && newPostForm.newDescription.$invalid">
+              <div class="error" ng-show="newPostForm.newDescription.$error.required">
+                You must include a description.
+              </div>
+              <div class="error" ng-show="newPostForm.newDescription.$error.minlength">
+                Your description must be at least 10 characters long.
+              </div>
+            </div>
           </div>
-          <input class="btn btn-default" type="submit" value="Submit Post!" ng-click="postIt(newPost)">        </form>
+          <input class="btn btn-default" type="submit" ng-disabled="signup_form.$invalid" value="Submit Post!" ng-click="postIt(newPost)">        </form>
       </div>
 
       <div ng-repeat="post in posts | filter:query | orderBy:sortPostsByWhat" class="postsDiv">
