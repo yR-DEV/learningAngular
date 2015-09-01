@@ -139,11 +139,26 @@
         </p>
         <div class="postNewComment">
           <div class="form-group" ng-show="post.newCommentBool">
-            <label for="postComments">Comments: </label>
-            <input type="text" class="form-control" id="postComments" ng-model="newComment.text" placeholder="Comments?">
-            <label for="postCommentsAuthor">Author: </label>
-            <input type="text" class="form-control" id="postCommentsAuthor" ng-model="newComment.author" placeholder="Author?">
-            <input class="btn btn-default" type="submit" value="Submit Comment!" ng-click="postNewComment(post, newComment)">        </form>
+            <form name="newCommentForm" novalidate>
+              <label for="postComments">Comments: </label>
+              <input type="text" class="form-control" name="newComment" required ng-minlength=10 id="postComments" ng-model="newComment.text" placeholder="Comments?">
+              <!-- <div class="error" ng-show="newCommentForm.newComment.$dirty && newCommentForm.newComment.$invalid">
+                <div class="error" ng-show="newCommentForm.newComment.$error.required">
+                  You must have something to say...
+                </div>
+                <div class="error" ng-show="newCommentForm.newComment.$error.minlength">
+                  Your comment must be at least 10 characters.
+                </div>
+              </div> -->
+              <label for="postCommentsAuthor">Author: </label>
+              <input type="text" class="form-control" name="newCommentAuthor" required ng-minlength=10 id="postCommentsAuthor" ng-model="newComment.author" placeholder="Author?">
+              <!-- <div class="error" ng-show="newCommentForm.newCommentAuthor.$dirty && newCommentForm.newCommentAuthor.$invalid">
+                <div class="error" ng-show="newCommentForm.newCommentAuthor.$error.required">
+                  You must include a handle.
+                </div>
+              </div> -->
+              <input class="btn btn-default" type="submit" value="Submit Comment!" ng-click="postNewComment(post, newComment)">
+            </form>
           </div>
         </div>
         <div ng-show="post.showCommentsBool">
