@@ -16,6 +16,8 @@ app
 	index.html
 ```
 
+//about to start unit two and learn sql at the same time.
+
 This structure is pretty simple.  We have an app.js file where we will declare our app and all dependencies.  For now it will just look like:
 
 ```js
