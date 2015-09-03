@@ -1,5 +1,7 @@
 # Routing
 
+8:30 starting routing
+
 One of Angular's most important features is its handling of routing and browser history navigation.
 
 Most single page apps (SPAs) actually consist of multiple "pages" or "screens". For example, we might have views for a landing page, login page, and signup page. Let's take our reddit clone example.  What if we wanted to add a "show page" for an individual post?  When a user clicks on a particular post, they see a view with details about the post.
