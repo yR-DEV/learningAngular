@@ -2,15 +2,24 @@ var app = angular.module("portfolioExercise", ['ngRoute']);
 
 app.config(function($routeProvider) {
   $routeProvider
-    .when('/',{
-      templateUrl: 'index.html',
-      controller: 'IndexController'
-    })
     .when('/bio', {
-      templateUrl: 'partials/bio.html',
-      controller: 'BioController'
+      templateUrl: "partials/bio.html",
+      controller: "BioController"
     });
 });
+
+
+// app.config(function($routeProvider) {
+//   $routeProvider
+//     .when('/',{
+//       templateUrl: 'index.html',
+//       controller: 'IndexController'
+//     })
+//     .when('/bio', {
+//       templateUrl: 'partials/bio.html',
+//       controller: 'BioController'
+//     });
+// });
 
 
 // app.config(function($routeProvider) {
