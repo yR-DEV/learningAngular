@@ -5,3 +5,7 @@ app.controller('HomeController', function($scope){
 app.controller('DogsController', function($scope) {
   $scope.dogGreeting = "Woof, woof.";
 });
+
+app.controller('CatchallController', function($scope, $routeParams) {
+  
+})

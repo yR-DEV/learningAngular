@@ -7,5 +7,9 @@ app.config(function($routeProvider) {
   }).when('/dogs', {
     templateUrl: 'partials/dogs.html',
     controller: 'DogsController'
-  });
+  })
+    .when('/:templatePath*', {
+      templateUrl: '<ng-include src="partials/catchall.html"></ng-include>',
+      controller: 'CatchallController'
+    });
 });

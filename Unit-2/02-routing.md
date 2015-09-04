@@ -107,6 +107,7 @@ Template:
 Make sure the second route works correctly by visiting `http://localhost:8080/#/dogs`. Play around with the browser navigation buttons.  Try bookmarking a page.  It should all work!
 
 **QUESTION:** Why does Angular put a `#` in the route path?
+- The pound sign is needed for non-HTML5 browsers. Back in the day it was apparently is an old browser shortcut preventing the browser from executing the HTTP request so that some js librry could build their own clientside routing on top. You can use $locationProvider.html5Mode(true) to tell angular to use HTML5 strategy if available.
 
 **EXERCISE:** Figure out how to set a "catchall" route that will render the `home.html` template if the user visits any other route
 
