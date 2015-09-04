@@ -8,8 +8,5 @@ app.config(function($routeProvider) {
     templateUrl: 'partials/dogs.html',
     controller: 'DogsController'
   })
-    .when('/:templatePath*', {
-      templateUrl: '<ng-include src="partials/catchall.html"></ng-include>',
-      controller: 'CatchallController'
-    });
+    .otherwise({redirectTo: 'partials/home.html'});
 });
