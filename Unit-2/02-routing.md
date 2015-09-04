@@ -110,6 +110,7 @@ Make sure the second route works correctly by visiting `http://localhost:8080/#/
 - The pound sign is needed for non-HTML5 browsers. Back in the day it was apparently is an old browser shortcut preventing the browser from executing the HTTP request so that some js librry could build their own clientside routing on top. You can use $locationProvider.html5Mode(true) to tell angular to use HTML5 strategy if available.
 
 **EXERCISE:** Figure out how to set a "catchall" route that will render the `home.html` template if the user visits any other route
+- I can add otherwise to the routes in app.js, and if it doesnt recognize the URL, it will jst redirect to whatever page I tell it to, I have a partials page for the catachall but it wont get loaded in the ng-view, I know I could also add a catch all with a .when for a regular route and use the * sign to indicate that everything else except for what URLS are explicitly stated above redirect to whatever, but that also requires a controller and whatnot. Need to figure that out.
 
 **EXERCISE:** Make a simple portfolio site using Angular.  It should have 3 routes: "projects", "bio", and "resume".  Add a Bootstrap navbar to the layout file with links to all 3 routes. Figure out how to have the navbar reflect the current route that a user is on.
 
