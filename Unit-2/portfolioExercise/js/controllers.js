@@ -9,3 +9,12 @@ app.controller("ProjectsController", function($scope) {
 app.controller("ResumeController", function($scope) {
   $scope.resume = "MY STUFF";
 });
+
+app.controller("Navbar", function($scope) {
+
+  $scope.currentPage = function(pageName) {
+    // console.log(typeof(pageName));
+    $scope.dropdown= pageName;
+  };
+
+});
