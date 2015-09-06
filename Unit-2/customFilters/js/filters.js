@@ -23,7 +23,7 @@ app.filter('camel', function() {
         dashIndex = i;
         // console.log(dashIndex);
       } else if(i === dashIndex + 1) {
-        console.log('next letter');
+        // console.log('next letter');
         tempLetter = tempInput[i].toUpperCase();
         tempArr.push(tempLetter);
       } else {
@@ -53,7 +53,38 @@ app.filter("pigLatin", function() {
     tempArr.splice(0, 1);
     tempArr.push(tempLetter + "ay");
     finalArr = tempArr.join('');
-    console.log(finalArr);
+    // console.log(finalArr);
     return finalArr;
+  };
+});
+
+app.filter("redact", function() {
+  var inputArr = [];
+  var redactArr = [];
+  var finalArr = [];
+  var letterIndex = [];
+  var tempRedactCount = 0;
+
+  return function(input, wordToRedact) {
+
+    inputArr = input.split('');
+    redactArr = wordToRedact.split('');
+    // console.log(inputArr);
+
+    for(var i = 0; i < inputArr.length; i++) {
+      for(var j = 0; j < redactArr.length; j++) {
+        if(inputArr[i] === redactArr[j]) {
+          tempRedactCount += 1;
+          letterIndex.push(inputArr[i]);
+          finalArr.push(inputArr[i]);
+          if (tempRedactCount === redactArr.length - 1) {
+
+          }
+        } else if(inputArr[i] === redactArr[j]) {
+          tempRedactCount -= 1;
+        }
+      }
+    }
+    return input;
   };
 });
