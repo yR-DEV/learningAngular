@@ -16,6 +16,8 @@ app.filter('kebab', function () {
 
 Remember that filters are just functions to which we pass input and get some returned output to display.  Every filter needs to return a function that takes a single argument:
 
+- EVERY FILTER NEEDS A RETURN FUNCTION THAT TAKES A SINGLE ARG
+
 ```js
 app.filter('kebab', function () {
   return function (input) {
