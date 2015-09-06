@@ -59,32 +59,21 @@ app.filter("pigLatin", function() {
 });
 
 app.filter("redact", function() {
+
+  var where = 0;
   var inputArr = [];
-  var redactArr = [];
-  var finalArr = [];
-  var letterIndex = [];
-  var tempRedactCount = 0;
 
   return function(input, wordToRedact) {
-
-    inputArr = input.split('');
-    redactArr = wordToRedact.split('');
-    // console.log(inputArr);
-
+    console.log(input, wordToRedact);
+    inputArr = input.split(' ');
     for(var i = 0; i < inputArr.length; i++) {
-      for(var j = 0; j < redactArr.length; j++) {
-        if(inputArr[i] === redactArr[j]) {
-          tempRedactCount += 1;
-          letterIndex.push(inputArr[i]);
-          finalArr.push(inputArr[i]);
-          if (tempRedactCount === redactArr.length - 1) {
-
-          }
-        } else if(inputArr[i] === redactArr[j]) {
-          tempRedactCount -= 1;
-        }
+      if(inputArr[i] === wordToRedact) {
+        console.log('match');
+        inputArr[i] = "REDACTED";
+        where = i;
       }
     }
-    return input;
+    var finalArr = inputArr.join(' ');
+    return finalArr;
   };
 });
