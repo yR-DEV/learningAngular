@@ -13,12 +13,20 @@
     <p>
       {{"HELLO_WORLD!" | kebab}}
     </p>
-
-      <!-- <input type="text" ng-model="filterInput" placeholder="Type something"> -->
+    <!-- <div ng-controller="PigLatin"> -->
+      <input type="text" ng-model="stringInput" placeholder="Type something">
+      <!-- <button type="submit" ng-click="pLString(filterInput)">PIG LATIN-IMIZE</button> -->
+    <!-- </div> -->
 
     <p>
-      {{"Hello-World_hello_world" | camel}}
+      {{"String" | pigLatin}}
     </p>
+
+    <h2>{{"RICHie-RICHTER" | pigLatin}}</h2>
+
+    <!-- <p>
+      {{"Hello-World_hello_world" | camel}}
+    </p> -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

@@ -3,7 +3,7 @@ app.filter('kebab', function() {
     if(typeof input === 'string') {
       return input.replace(/_/g, "-");
     } else {
-      return "ONLY LETTERS PLS"
+      return "ONLY LETTERS PLS";
     }
   };
 });
@@ -36,6 +36,24 @@ app.filter('camel', function() {
     });
     var finalArr = tempArr.join('');
     // console.log(tempArr);
+    return finalArr;
+  };
+});
+
+app.filter("pigLatin", function() {
+  var tempArr = [];
+  var finalArr = [];
+  var tempLetter = "";
+
+  return function(input) {
+    // console.log(input);
+    // return input;
+    tempArr = input.split('');
+    tempLetter = tempArr[0];
+    tempArr.splice(0, 1);
+    tempArr.push(tempLetter + "ay");
+    finalArr = tempArr.join('');
+    console.log(finalArr);
     return finalArr;
   };
 });
