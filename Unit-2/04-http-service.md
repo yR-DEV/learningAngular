@@ -76,6 +76,7 @@ $http.get('https://api.github.com/zen').then(function(data){
 **EXERCISE:** Try using `$http.get()` to make a request to `https://itunes.apple.com/search?term=jack+johnson` and display the title of every post on your template. You should get an error. What was the error?  Why did the api.github.com domain work and not the itunes.com domain?
 
 **EXERCISE:** Since making a request to `https://itunes.apple.com/search?term=jack+johnson` didn't work, go to the url in your browser and copy all the json that gets returned.  Save the json data into a file in your app called `itunes.json`.  Use the `$http.get()` service to make a request to get the `itunes.json` file.  Display the title of every post on your template.  Why does this method for getting the json data work?
+- because the browser is making a request for data that it not on its server. you have to use. You need to do a cross origin request. Because you go to the itunes website and make a request on that website, then save that data, I can render it because the data is on the same server as index
 
 **EXERCISE:** Try making a request to an invalid URL.  Write code to properly handle a request that fails.  Does Angular have any built-in functionality that could help you?**
 
