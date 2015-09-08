@@ -11,6 +11,7 @@ When a user enters a movie title into the search box and clicks the search butto
 Search/Home Page:
 
   - Input box for user to enter movie title.
+  - (DONE)
   - When the user clicks the search button:
     - Search OMDb API for movies with the input text in the title.
     - Displays search results on the same page

@@ -1,7 +1,9 @@
-app.controller("MainSearch", function($scope) {
+app.controller("MainSearch", function($scope, $http) {
 
   $scope.movieSearch = function(title) {
-    // console.log(title);
+
+    $http.get('')
+
   };
 
 });
