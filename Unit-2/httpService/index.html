@@ -10,6 +10,18 @@
   <body>
 
     <div ng-controller="HttpController">
+      <button type="submit" ng-click="showNewPostForm()">New Post!</button>
+
+      <div ng-show="newPostBool">
+        <form>
+          <input type="text" ng-model="newPostUsername" placeholder="Enter your username here">
+          <br>
+          <input type="text" ng-model="newPostComment" placeholder="Enter your comment here">
+          <br>
+          <button type="submit" ng-click="hideNewPostForm()">Submit Post!</button>
+        </form>
+      </div>
+
       <div ng-repeat="info in data">
         <p>
           {{info}}

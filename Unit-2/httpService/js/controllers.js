@@ -1,5 +1,7 @@
 app.controller('HttpController', function($scope, $http) {
 
+  $scope.newPostBool = false;
+
   // $http.get('https://itunes.apple.com/search?term=jack+johnson').then(function(wisdom) {
   //   return $scope.zenWisdom = wisdom.data;
   // });
@@ -8,5 +10,13 @@ app.controller('HttpController', function($scope, $http) {
     console.log(apiData.data);
     $scope.data = apiData.data;
   });
+
+  $scope.showNewPostForm = function() {
+    $scope.newPostBool = true;
+  };
+
+  $scope.hideNewPostForm = function() {
+    $scope.newPostBool = false;
+  }
 
 });
