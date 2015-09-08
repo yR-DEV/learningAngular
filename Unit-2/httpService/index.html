@@ -21,10 +21,18 @@
           <button type="submit" ng-click="hideNewPostForm()">Submit Post!</button>
         </form>
       </div>
-
+      <p>
+        -------------------------
+      </p>
       <div ng-repeat="info in data">
         <p>
-          {{info}}
+          Name: {{info.name}}
+        </p>
+        <p>
+          Comment: {{info.content}}
+        </p>
+        <p>
+          ------------------------
         </p>
       </div>
 

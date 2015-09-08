@@ -17,11 +17,12 @@ app.controller('HttpController', function($scope, $http) {
 
   $scope.hideNewPostForm = function() {
     // console.log($scope.message);
-    $http.post('https://shielded-peak-6345.herokuapp.com/', {message: {name: $scope.message.name, content: $scope.message.content}}).then(function(res) {
-      console.log(res);
-    }, function(res) {
-      console.log(res);
-    });
+    $http.post('https://shielded-peak-6345.herokuapp.com/', {name: $scope.message.name, content: $scope.message.content})
+      .then(function(response) {
+        console.log(response);
+      }, function(response) {
+        console.log(response);
+      });
 
     $scope.newPostBool = false;
   };
