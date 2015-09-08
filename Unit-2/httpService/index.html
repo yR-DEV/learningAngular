@@ -14,9 +14,9 @@
 
       <div ng-show="newPostBool">
         <form>
-          <input type="text" ng-model="newPostUsername" placeholder="Enter your username here">
+          <input type="text" ng-model="message.name" placeholder="Enter your username here">
           <br>
-          <input type="text" ng-model="newPostComment" placeholder="Enter your comment here">
+          <input type="text" ng-model="message.content" placeholder="Enter your comment here">
           <br>
           <button type="submit" ng-click="hideNewPostForm()">Submit Post!</button>
         </form>
