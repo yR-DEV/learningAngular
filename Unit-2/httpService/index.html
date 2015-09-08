@@ -9,8 +9,13 @@
   </head>
   <body>
 
-    <div ng-controller="RailsGet">
-      
+    <div ng-controller="HttpController">
+      <div ng-repeat="info in data">
+        <p>
+          {{data.content}}
+        </p>
+      </div>
+
     </div>
 
 
