@@ -23,8 +23,10 @@ app.controller('MathController', function($scope, $routeParams){
 **EXERCISE:** Look at an angular app you have made previous (reddit clone or your portfolio site).  What dependencies are there?  Where do you see dependencies other than the contoller?
 
 **EXERCISE:**  In the above example (MathController) does the order of the dependencies matter?  Does $scope have to come before $routeParams?  Do the names matter?  Could we name them something else?
+- I dont think you can rename them but I am going to look that up after the exercise below. I feel like $routeParams is semi-dependent on the $scope, but will look that up as well
 
 **EXERCISE: DO NOT SKIP THIS EXERCISE.**  In production code, you typically want your javascript file to be as small as possible so that it can be downloaded faster.  To make the files smaller, developers minify their js files.  Find a minification tool and minify your js code.  Update your html file so that it now points to your newly minified js files.  Does your angular app still work?  If it stopped working, what is the problem?
+- There are injector problems when you minify any js file containing angular. And best practice to write controllers and whatnot opens with the array[] that also includes the function.
 
 **EXERCISE:** So far we have mainly seen one way to do dependency injection.  Research and figure out the other two ways.  Which one is the best practice?
 
