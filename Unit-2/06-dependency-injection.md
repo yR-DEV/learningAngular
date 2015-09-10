@@ -29,6 +29,7 @@ app.controller('MathController', function($scope, $routeParams){
 - There are injector problems when you minify any js file containing angular. And best practice to write controllers and whatnot opens with the array[] that also includes the function.
 
 **EXERCISE:** So far we have mainly seen one way to do dependency injection.  Research and figure out the other two ways.  Which one is the best practice?
+- You can create a dependency with the new operator, you can look it up by referring to a global variable, or you can just pass it where it is needed. typically just passing it to whatever it needs is best practice because it removes the responsibility of the component locating the dpendency.
 
 ![](http://html5hub.com/wp-content/uploads/2013/11/superA.png)
 
