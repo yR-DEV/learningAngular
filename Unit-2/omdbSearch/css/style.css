@@ -1,0 +1,62 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.search-controller {
+  text-align: center;
+}
+
+#searchTitleField {
+  width: 18%;
+}
+
+.movie-query-div {
+  width: 30%;
+  height: 90px;
+  margin: auto;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.bottom-border-div {
+  border-bottom: 1px solid grey;
+  width: 100%;
+}
+
+.search-button {
+  margin-bottom: 15px;
+}
+
+.single-movie-query {
+  margin: auto;
+  width: 40%;
+  border: 1px solid grey;
+}
+
+.movie-image {
+  width: auto;
+  max-width: 180px;
+  height: auto;
+  max-height: 200px;
+  margin-right: 240px;
+  margin-top: -120px;
+  margin-left: 10px;
+
+}
+
+.movie-plot {
+  float: right;
+  margin-left: 170px;
+  margin-right: 10px;
+
+}
+
+.movie-key-title {
+  font-weight: bold;
+  margin-bottom: -13px;
+}
