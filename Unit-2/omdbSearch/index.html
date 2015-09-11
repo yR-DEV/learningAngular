@@ -8,22 +8,22 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
   </head>
   <body>
-    <div class="search-controller" ng-controller="SearchController">
-      <div class="bottom-border-div">
-
-        <h1>Angular OMDB API Search</h1>
-        <br>
-        <h4>Please enter a movie title.</h4>
-        <br>
-        <input id="searchTitleField" type="text" ng-model="movieTitleInput" placeholder="Enter title here...">
-        <br>
-        <br>
-        <a ng-href="/#/movieSearch">
-          <button class="search-button" type="submit" ng-click="searchMovieTitle(movieTitleInput)">Search Title!</button>
-        </a>
+    <div ng-controller="SearchController" class="search-div">
+      <!-- <input type="text" ng-model="queryInput" placeholder="Enter movie title here."> -->
+      <h1>OMDB API Movie Search</h1>
+      <br>
+      <h4>Please Enter the Title of the Movie.</h4>
+      <br>
+      <div class="input-group input-query">
+        <!-- <span class="input-group-addon" id="basic-addon1"></span> -->
+        <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
       </div>
+      <!-- <div class="input-group">
+        <input type="text" class="form-control queryInput" placeholder="Enter Movie Title Here.">
+      </div> -->
       <br>
-      <br>
+      <button type="button" class="btn btn-default query-button">Search!</button>
+    </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

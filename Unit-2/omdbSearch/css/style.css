@@ -7,7 +7,29 @@ a {
   color: #00B7FF;
 }
 
-.search-controller {
+.search-div {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.queryInput {
+  width: 30%;
+  margin: auto;
+  text-align: center;
+}
+
+.input-query {
+  width: 35%;
+  margin:auto;
+}
+
+.query-button {
+  margin-top: 7px;
+  width: 15%;
+}
+
+/*.search-controller {
   text-align: center;
 }
 
@@ -59,4 +81,4 @@ a {
 .movie-key-title {
   font-weight: bold;
   margin-bottom: -13px;
-}
+}*/
