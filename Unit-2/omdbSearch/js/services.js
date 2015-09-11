@@ -8,3 +8,13 @@
 //   };
 //   // console.log('in factory');
 // }]);
+
+app.factory('MovieQuery',
+function($scope, $http) {
+  var QueryResults = {};
+  QueryResults.queryResults = [];
+
+  MovieQuery.initialSearch = function(titleInput) {
+    console.log(titleInput);
+  };
+});

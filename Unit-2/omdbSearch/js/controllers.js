@@ -13,8 +13,8 @@
 //   console.log('in search controller');
 // }]);
 
-app.controller('SearchController', ['$scope', '$http',
-function($scope, $http) {
-  // $scope.results = movieQuery.queryMatches();
+app.controller('SearchController', ['$scope', '$http', 'MovieQuery',
+function($scope, $http, MovieQuery) {
+  $scope.results = MovieQuery.initialSearch($scope.titleInput);
   console.log('in search controller');
 }]);
