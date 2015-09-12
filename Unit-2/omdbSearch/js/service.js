@@ -1,3 +1,8 @@
 app.factory('MovieQueries', function() {
-  console.log('in factory');
+  var MovieQueries = {};
+  MovieQueries.movieQueries = [];
+
+  MovieQueries.queryAllMovies = function(title) {
+    console.log(title);
+  };
 });
