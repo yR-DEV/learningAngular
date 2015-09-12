@@ -6,5 +6,6 @@ function($scope, $http) {
 
 app.controller('ProductController', ['$scope', '$http',
 function($scope, $http) {
-  console.log('in product controller');
+  $scope.productList = list;
+  console.log($scope.productList);
 }]);

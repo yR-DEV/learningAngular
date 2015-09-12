@@ -12,3 +12,26 @@
   width: 100%;
   text-align: center;
 }
+
+.product-filters {
+  margin-bottom: 25px;
+  border-bottom: 1px solid grey;
+}
+
+.product-population {
+  text-align: center;
+}
+
+.left-coll {
+  width: 40%;
+}
+
+.right-coll {
+  width: 59%;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 26px;
+  text-align: left;
+}

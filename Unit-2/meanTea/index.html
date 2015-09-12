@@ -46,30 +46,78 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-    <div ng-controller="SearchController">
-      <span>
-        Search bycategory:
-        <select ng-model="categorySelectSearch">
-          <option value="dark">
-            dark
-          </option>
-          <option value="awesome">
-            awesome
-          </option>
-          <option value="cold">
-            cold
-          </option>
-        </select>
-        Search by name:
-        <input type="text" ng-model="nameInputSearch"
-      </span>
+    <div ng-controller="SearchController" class="product-filters">
+        <span>
+          Search by category:
+          <select ng-model="categorySelectSearch">
+            <option value="dark">
+              dark
+            </option>
+            <option value="awesome">
+              awesome
+            </option>
+            <option value="cold">
+              cold
+            </option>
+          </select>
+          Search by name:
+          <input type="text" ng-model="nameInputSearch">
+        </span>
+        <br>
+        <br>
     </div>
 
-    <div ng-controller="ProductController">
-      <p>
-        Hi
-      </p>
+    <div ng-controller="ProductController" class="products-list">
+      <table>
+        <div class="table-headers">
+          <tr>
+            <th class="left-coll">
+              Tea:
+            </th>
+            <th class="right-coll">
+              Information:
+            </th>
+            <th>
+              <select>
+                <option value="cheapest">
+                  Cheapest
+                </option>
+                <option value="expensive">
+                  Most Expensive
+                </option>
+              </select>
+            </th>
+          </tr>
+        </div>
+        <tr ng-repeat="product in productList">
+          <td>
+            <img ng-src="{{product.imageUrl}}">
+          </td>
+          <td>
+            <p class="product-title">
+              {{product.name}}
+            </p>
+            <p>
+              Price: {{product.price | currency: "USD $": 2}}
+            </p>
+            <p>
+              Ingredients: {{product.ingredients}}
+            </p>
+            <p>
+              Rating: {{product.rating}
+            </p>
+            <p ng-show="{{product.inStock}}">
+              Yes
+            </p>
+            <p ng-show="{{!product.inStock}}">
+              No
+            </p>
+          </td>
+        </tr>
+      </table>
+
     </div>
+
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
