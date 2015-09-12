@@ -1,0 +1,14 @@
+.main-header {
+  color: orange;
+  text-align: left;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 60px;
+}
+
+.awesome-tea {
+  background-color: orange;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
