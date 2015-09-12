@@ -112,6 +112,12 @@
             <p ng-show="{{!product.inStock}}">
               No
             </p>
+            <ul>
+              <li ng-repeat="category in product.categories">
+                {{category}}
+              </li>
+            </ul>
+
           </td>
         </tr>
       </table>
