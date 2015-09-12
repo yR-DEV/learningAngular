@@ -1,0 +1,16 @@
+.search-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.centered-input {
+  text-align: center;
+  margin-left: 225px;
+  /*width: 20px;*/
+  /*width: 150px;*/
+  /*margin-bottom: 15px;*/
+}
+
+.title-button {
+  margin-top: 15px;
+}
