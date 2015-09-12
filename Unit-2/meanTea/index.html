@@ -47,10 +47,30 @@
     </nav>
 
     <div ng-controller="SearchController">
+      <span>
+        Search bycategory:
+        <select ng-model="categorySelectSearch">
+          <option value="dark">
+            dark
+          </option>
+          <option value="awesome">
+            awesome
+          </option>
+          <option value="cold">
+            cold
+          </option>
+        </select>
+        Search by name:
+        <input type="text" ng-model="nameInputSearch"
+      </span>
+    </div>
+
+    <div ng-controller="ProductController">
       <p>
-        Hallo.
+        Hi
       </p>
     </div>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
