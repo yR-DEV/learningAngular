@@ -1,11 +1,9 @@
-app.controller("SearchController", ['$scope', '$http',
-function($scope, $http) {
-  // console.log('in controller');
-  //
-  // $scope.allQueries = MovieQueries.movieQueries;
+app.controller('SearchController', ['$scope', '$http', 'MovieQueries',
+function($scope, $http, MovieQueries) {
 
   $scope.queryMoviesApi = function(title) {
-    console.log(title);
+    MovieQueries.queryAllTitles(title);
   };
 
+  console.log('in search controller');
 }]);
