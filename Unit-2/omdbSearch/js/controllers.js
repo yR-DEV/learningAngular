@@ -1,9 +1,13 @@
+var queryResults = [];
+
 app.controller('SearchController', ['$scope', '$http', 'MovieQueries',
 function($scope, $http, MovieQueries) {
 
   $scope.queryMoviesApi = function(title) {
-    $scope.results = MovieQueries.queryAllTitles(title);
-    // console.log($scope.results);
+    var x = MovieQueries.queryAllTitles(title);
+    // $scope.results = MovieQueries.queryAllTitles(title);
+    // queryResults = MovieQueries.queryAllTitles(title);
+    console.log(x);
     // console.log($scope.results);
   };
 
@@ -13,7 +17,11 @@ function($scope, $http, MovieQueries) {
 
 app.controller('ResultController', ['$scope', '$http', 'MovieQueries',
 function($scope, $http, MovieQueries) {
-  console.log(MovieQueries.initTitleQuery);
-  console.log(MovieQueries.initTitleQuery);
+
+  $scope.showResults = function() {
+    console.log(MovieQueries.returnResults);
+  };
+
+  // console.log(MovieQueries.returnResults);
 
 }]);

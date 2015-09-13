@@ -15,7 +15,12 @@ function($http) {
     });
   };
 
+  returnResults = function() {
+    return initTitleQuery;
+  };
 
+
+  // console.log(initTitleQuery);
   return {
     queryAllTitles: queryAllTitles,
     initTitleQuery: initTitleQuery,
